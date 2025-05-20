@@ -25,7 +25,7 @@ export default function ImageUploader() {
     setResponse("");
 
     try {
-      const res = await axios.post("http://localhost:5000/analyze", formData);
+      const res = await axios.post("https://lenslyze-image-text-analysis.onrender.com/analyze", formData);
       setResponse(res.data.geminiAnswer);
     } catch (err) {
       console.error(err);
