@@ -8,7 +8,7 @@ import google.generativeai as genai
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://lens-lyze-image-text-analysis.vercel.app"])
 
 RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
